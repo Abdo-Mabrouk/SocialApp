@@ -22,7 +22,7 @@ export default function PostCard({postInf,showAllComment=false}:{postInf:Post,sh
   const postText = useRef<HTMLInputElement>(null)
   const postImg  = useRef<HTMLInputElement>(null)
   const [showModal, setShowModal] = useState(false);
-  const [randomNumber, setRandomNumber] = useState<number | null>(null);
+  const [randomNumber, setRandomNumber] = useState<number >(0);
   const [randomNumbersh, setRandomNumbersh] = useState<number | null>(null);
    const [increase, setIncrease] = useState<boolean>(true); 
 
@@ -50,6 +50,14 @@ export default function PostCard({postInf,showAllComment=false}:{postInf:Post,sh
           headers: { token }
         };
     const {data} = await axios.request(options)
+    if (data.message ==='success') {
+          Swal.fire({
+          title: "Done",
+          icon: "success",
+          draggable: true
+        });
+    
+  }
   }
   async function updatePoste(id:string){
     const text = postText.current?.value || "";

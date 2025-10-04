@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { postsState } from "@/types/poste.typs";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
@@ -62,12 +63,12 @@ const postSlice= createSlice({
         builder.addCase(getAllPost.fulfilled,(state,action)=>{
             state.Posts = action.payload;
         })
-        builder.addCase(getAllPost.rejected,(state,action)=>{
+        builder.addCase(getAllPost.rejected,()=>{
         })
         builder.addCase(getSinglePost.fulfilled,(state,action)=>{
             state.singlePosts = action.payload;
         })
-        builder.addCase(getSinglePost.rejected,(state,action)=>{
+        builder.addCase(getSinglePost.rejected,()=>{
         })
     }
 });

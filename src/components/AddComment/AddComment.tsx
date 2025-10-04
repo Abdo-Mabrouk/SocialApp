@@ -3,6 +3,7 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { useFormik } from "formik";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 
 export default function AddComment({id}:{id:string}) {
@@ -26,9 +27,17 @@ export default function AddComment({id}:{id:string}) {
         }
     }
     const {data} = await axios.request(options)
+    if (data.message ==='success') {
+      Swal.fire({
+      title: "Done",
+      icon: "success",
+      draggable: true
+    });
+    
+    }
     
   }
-  let formik = useFormik({
+  const formik = useFormik({
       initialValues: {
       content: "",
       },

@@ -1,4 +1,3 @@
-import AddPost from "@/components/AddPost/AddPost";
 import Navbar from "@/components/Navbar/Navbar";
 import PortfolioData from "@/components/PortfolioData/PortfolioData";
 import SaidBar2 from "@/components/SaidBar2/SaidBar2";

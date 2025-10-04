@@ -40,7 +40,7 @@ export function LoginForm() {
             }
         })
     }
-    let formik = useFormik({
+    const formik = useFormik({
         initialValues: {
         email: "",
         password: "",
@@ -121,9 +121,6 @@ export function LoginForm() {
             name="rememberMe"
             id="rememberMe"
             className="mx-2"
-            value={formik.values.rememberMe}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
             />
             <label htmlFor="rememberMe">Keep me signed in</label>
         </div>

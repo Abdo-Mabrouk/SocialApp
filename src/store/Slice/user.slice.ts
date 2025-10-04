@@ -55,7 +55,7 @@ const userLoginSlice= createSlice({
             });
             
         })
-        builder.addCase(Loginn.rejected,(state,action)=>{
+        builder.addCase(Loginn.rejected,()=>{
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
@@ -69,7 +69,7 @@ const userSignUpSlice= createSlice({
     initialState,
     reducers:{},
     extraReducers:function(builder){
-        builder.addCase(SignUp.fulfilled,(state,action)=>{
+        builder.addCase(SignUp.fulfilled,(action)=>{
             if (action.payload.message === "success") {
                Swal.fire({
                 title: "Account created",
@@ -79,7 +79,7 @@ const userSignUpSlice= createSlice({
             }
         })
             
-        builder.addCase(SignUp.rejected,(state,action)=>{
+        builder.addCase(SignUp.rejected,()=>{
            Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -98,7 +98,7 @@ const userDataSlice= createSlice({
             state.user = action.payload.user;  
         })
             
-        builder.addCase(userData.rejected,(state,action)=>{
+        builder.addCase(userData.rejected,()=>{
         })
     }
 });

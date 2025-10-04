@@ -19,7 +19,7 @@ export default function PortfolioData() {
 
   useEffect(() => {
     dispach(userData());
-  }, []);
+  }, [dispach]);
 
   async function addPoste() {
     const imgProfile = postImg.current?.files?.[0];

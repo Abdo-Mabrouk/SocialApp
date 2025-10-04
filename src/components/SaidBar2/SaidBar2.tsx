@@ -28,7 +28,7 @@ export default function SaidBar2() {
                 </div>
             </div>
             <div className=" p-3 rounded-lg bg-gray-200 space-y-5">
-                <p className="font-semibold"> What's Happening  </p>
+                <p className="font-semibold"> What is Happening  </p>
                 <div className="">
                         <p className="font-semibold text-sm">React 19 Beta Released </p>
                         <p className="text-gray-400 text-[12px]">Technology 2 hours ago</p>

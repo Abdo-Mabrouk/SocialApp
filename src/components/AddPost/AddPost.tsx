@@ -29,7 +29,7 @@ export default function AddPost() {
         },
         data:myFormData
     }
-    let {data} = await axios.request(options)
+    const {data} = await axios.request(options)
 
     if (data.message === "success") {
       Swal.fire({

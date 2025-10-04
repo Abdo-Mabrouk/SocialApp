@@ -10,7 +10,17 @@ import Img from "@/img/noPost.png"
 export default function UserPosts() {
   const userId = AppUseSelector((store)=> store.userDataReducer.user?._id)
   const token = AppUseSelector((store)=> store.userLoginReducer.token)
-  const [posts, setPosts] = useState<any[]>([])
+  interface Post {
+  _id: string;
+  content: string;
+  image?: string;
+  createdAt?: string;
+  user?: {
+    name: string;
+    photo: string;
+  };
+}
+  const [posts, setPosts] = useState<Post[]>([])
   const [loading, setLoading] = useState(true) // يبدأ بـ true عشان يظهر Skeleton في الأول
 
   useEffect(() => {
@@ -45,7 +55,7 @@ export default function UserPosts() {
             ))
           : <div className="text-gray-400 text-center mt-10">
             <p className="text-black text-2xl font-bold text-center">No posts found</p>
-            <Image src={Img} width={300} height={300} className=" mx-auto"/>
+            <Image alt="icon for No posts found" src={Img} width={300} height={300} className=" mx-auto"/>
           </div>
       }
     </>

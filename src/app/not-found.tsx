@@ -6,7 +6,7 @@ export default function notFound() {
     <>
     <div className="w-full h-screen flex flex-col justify-center items-center">
       <div className="">
-      <Image src={Img} width={500} height={500}/>
+      <Image alt="photo" src={Img} width={500} height={500}/>
       <p className="text-center text-3xl mt-10">Page not found</p>
       </div>
     </div>

@@ -49,10 +49,7 @@ export default function PostCard({postInf,showAllComment=false}:{postInf:Post,sh
           method: "DELETE",
           headers: { token }
         };
-    let {data} = await axios.request(options)
-    console.log(data);
-    
-
+    const {data} = await axios.request(options)
   }
   async function updatePoste(id:string){
     const text = postText.current?.value || "";
@@ -72,10 +69,7 @@ export default function PostCard({postInf,showAllComment=false}:{postInf:Post,sh
         },
         data:myFormData
     }
-    let {data} = await axios.request(options)
-    console.log(data);
-    
-
+    const {data} = await axios.request(options)
     if (data.message === "success") {
       Swal.fire({
         title: "updated",

@@ -31,15 +31,15 @@ export default function SaidBar2() {
                 <p className="font-semibold"> What's Happening  </p>
                 <div className="">
                         <p className="font-semibold text-sm">React 19 Beta Released </p>
-                        <p className="text-gray-400 text-[12px]">Technology · 2 hours ago</p>
+                        <p className="text-gray-400 text-[12px]">Technology 2 hours ago</p>
                 </div>
                 <div className="">
                         <p className="font-semibold text-sm">JavaScript Conference 2024 </p>
-                        <p className="text-gray-400 text-[12px]">Events · 4 hours ago</p>
+                        <p className="text-gray-400 text-[12px]">Events 4 hours ago</p>
                 </div>
                 <div className="">
                         <p className="font-semibold text-sm">Open Source Friday </p>
-                        <p className="text-gray-400 text-[12px]">Community · 1 day ago</p>
+                        <p className="text-gray-400 text-[12px]">Community 1 day ago</p>
                 </div>
 
             </div>

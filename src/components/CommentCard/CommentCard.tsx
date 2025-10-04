@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Comment } from "@/types/poste.typs"
 import avatar from "@/img/avatar.png";
-import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function CommentCard({commentInf}:{commentInf:Comment}) {

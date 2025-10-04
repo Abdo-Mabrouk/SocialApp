@@ -11,7 +11,7 @@ import { getSinglePost } from "@/store/Slice/Poste.slice";
 import { use, useEffect } from "react"
 
 
-export default function page({params}:{params:Promise<{postId:string}>}) {
+export default function Page({params}:{params:Promise<{postId:string}>}) {
     const {postId}= use(params);
     const disptch = AppUseDispatch()
     const post = AppUseSelector((store)=> store.PostsReducer.singlePosts)

@@ -12,7 +12,7 @@ export default function AddComment({id}:{id:string}) {
           content: Yup.string()
           .required("Need to write a comment")
   });
-  async function handelLogen(values) {
+  async function handelLogen(values:{content:string}) {
 
     const options ={
         url:`https://linked-posts.routemisr.com/comments`,
@@ -25,8 +25,7 @@ export default function AddComment({id}:{id:string}) {
             post:id
         }
     }
-    let {data} = await axios.request(options)
-    console.log(data);
+    const {data} = await axios.request(options)
     
   }
   let formik = useFormik({

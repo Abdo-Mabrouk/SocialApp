@@ -1,11 +1,7 @@
 "use client";
-
-import { userLoginReducer } from './user.slice';
-import { AppUseSelector } from "@/hooks/store.hook";
 import { postsState } from "@/types/poste.typs";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import Swal from "sweetalert2";
 
  const initialState:postsState ={
     Posts: null,
@@ -24,7 +20,7 @@ export const getAllPost = createAsyncThunk ('postes/getAllPoste', async (_,{getS
             token
         }
     }
-    let {data} = await axios.request(options)
+    const {data} = await axios.request(options)
     return data.posts
 })
 export const getSinglePost = createAsyncThunk ('postes/getSinglePost', async (id:string,{getState})=>{
@@ -37,7 +33,7 @@ export const getSinglePost = createAsyncThunk ('postes/getSinglePost', async (id
             token
         }
     }
-    let {data} = await axios.request(options)
+    const {data} = await axios.request(options)
     return data.post
 })
 export const getUserPost = createAsyncThunk(

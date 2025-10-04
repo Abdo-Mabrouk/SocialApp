@@ -16,7 +16,7 @@ export const Loginn = createAsyncThunk ('user/login', async (values:{email:strin
         method:"POST",
         data :values
     }
-    let {data} = await axios.request(options)
+    const {data} = await axios.request(options)
     return data
 })
 export const SignUp = createAsyncThunk ('user/SignUp', async (values:{email:string , password:string , name:string, rePassword:string, dateOfBirth:string, gender:string})=>{
@@ -25,7 +25,7 @@ export const SignUp = createAsyncThunk ('user/SignUp', async (values:{email:stri
         method:"POST",
         data :values
     }
-    let {data} = await axios.request(options)
+    const {data} = await axios.request(options)
     return data
 })
 export const userData = createAsyncThunk ('user/userData', async ()=>{
@@ -36,7 +36,7 @@ export const userData = createAsyncThunk ('user/userData', async ()=>{
             token: localStorage.getItem("tokenSocialApp")
         }
     }
-    let {data} = await axios.request(options)
+    const {data} = await axios.request(options)
     return data
 })
 

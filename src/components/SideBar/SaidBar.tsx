@@ -1,6 +1,6 @@
 "use client"
-import { faHouse,faBell,faEnvelope,faBookmark,faUser } from "@fortawesome/free-regular-svg-icons"
-import { faHashtag, faPlus, faRightFromBracket, faSliders, faUsers, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faHouse,faUser } from "@fortawesome/free-regular-svg-icons"
+import {  faPlus, faRightFromBracket, faSliders, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { usePathname } from "next/navigation";

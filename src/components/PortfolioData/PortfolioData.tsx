@@ -35,7 +35,7 @@ export default function PortfolioData() {
       headers: { token },
       data: myFormData,
     };
-    let data = await axios.request(options);
+    const data = await axios.request(options);
     console.log(data);
     if (data.data.message=== "success") {
       Swal.fire({

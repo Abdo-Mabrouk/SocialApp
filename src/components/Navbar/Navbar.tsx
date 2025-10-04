@@ -29,13 +29,13 @@ export default function Navbar() {
             <h1 className="text-3xl mb-5 font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" > SocialApp</h1>
             <Link href={`/portfolio`} className="lg:hidden">
               <div className=" overflow-hidden flex items-center gap-2.5">
-                  <Image src={profileData?.photo} width={50} height={50} className="size-12 rounded-full"/>
+                  <Image src={profileData?.photo} width={50} height={50} alt="ghgh" className="size-12 rounded-full"/>
               </div>
             </Link>
         </div>
         <div className="icons flex items-center gap-10">
           <div className=" flex items-center gap-5">
-            <Link href={`/`}>
+            <Link href={`/home`}>
               <div className={ pathname === "/" ? "relative size-9 bg-gray-300 transition-colors duration-300 cursor-pointer flex items-center justify-center rounded-md group" :"relative size-9 hover:bg-gray-300 transition-colors duration-300 cursor-pointer flex items-center justify-center rounded-md group"}>
               <FontAwesomeIcon icon={faHouse} className="size-5 text-gray-600 group-hover:text-black transition-colors duration-300 " />
               </div>
@@ -50,7 +50,7 @@ export default function Navbar() {
               <FontAwesomeIcon icon={faGear} className="size-5 text-gray-600 group-hover:text-black transition-colors duration-300 " />
               </div>
             </Link>
-            <Link href={`/login`} onClick={delettocen}>
+            <Link href={`/`} onClick={delettocen}>
               <div className="size-9  hover:bg-gray-300 transition-colors duration-300 cursor-pointer flex items-center justify-center rounded-md group">
               <FontAwesomeIcon icon={faRightFromBracket} className="size-5 text-gray-600 group-hover:text-black transition-colors duration-300" />
               </div>

@@ -31,11 +31,11 @@ export function LoginForm() {
             "Minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character"
         ),
     });
-    function handelLogen(values) {
+    function handelLogen(values:{email:string,password:string}) {
         dispatch(Loginn(values)).then((res)=>{
             if (res.payload.message === "success") {
                 setTimeout(()=>{
-                    navget.push("/")
+                    navget.push("/home")
                 },2000)
             }
         })

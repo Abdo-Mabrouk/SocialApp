@@ -1,26 +1,43 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:is(.dark *));
+
+@utility container {
+    margin-inline: auto;
+    width: 90%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* exo-2-latin-wght-normal */
+@font-face {
+  font-family: 'Exo 2 Variable';
+  font-style: normal;
+  font-display: auto;
+  font-weight: 100 900;
+  src: url(@fontsource-variable/exo-2/files/exo-2-latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+    @apply  selection:bg-gradient-to-r selection:from-blue-600 selection:to-purple-600 selection:bg-clip-text  ;
+  font-family: 'Exo 2 Variable', sans-serif;
+  text-transform: capitalize;
+
 }
+@layer components {
+    .btn {
+        @apply px-4 py-2 bg-black hover:bg-black/80 border-2 border-black transition-colors duration-500 text-white font-semibold rounded-2xl cursor-pointer;
+    }
+
+    .form-control {
+        @apply px-3 py-2  focus:border-gray-400 hover:border-gray-400 cursor-pointer border-2 border-transparent bg-gray-200 focus:outline-none w-full rounded-lg;
+    }
+    .label {
+        @apply text-black font-semibold text-lg block mb-3;
+    }
+}
+
+
+
+
